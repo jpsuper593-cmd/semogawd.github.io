@@ -1,77 +1,108 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SEMOGA WD</title>
+
+  <!-- Font Awesome untuk ikon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body {
       margin: 0;
       font-family: 'Arial Black', sans-serif;
-      background-color: #0e1117;
+      background: linear-gradient(135deg, #0e1117 0%, #1b1f2a 100%);
       color: white;
       text-align: center;
     }
-    .profile img {
-      width: 120px;
-      height: 120px;
+
+    /* Gambar lingkaran di atas */
+    .top-circle img {
+      width: 140px;              /* atur besar kecil di sini */
+      height: 140px;
+      object-fit: cover;
       border-radius: 50%;
-      border: 4px solid red;
-      margin-top: 30px;
+      border: 4px solid #ff4444;
+      margin: 30px auto 10px;
+      display: block;
+      background: white;         /* memberi latar putih agar rapi */
     }
+
     h1 {
-      font-size: 36px;
-      margin: 15px 0 10px;
+      font-size: 38px;
+      margin: 10px 0 20px;
+      letter-spacing: 2px;
+      color: #ff4444;
+      text-shadow: 0 0 12px rgba(255, 68, 68, 0.7);
     }
+
     .description {
-      font-size: 14px;
+      font-size: 15px;
       max-width: 90%;
-      margin: 0 auto 25px;
-      color: #bbb;
+      margin: 0 auto 30px;
+      color: #ccc;
       line-height: 1.6;
     }
+
     .menu a {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       width: 80%;
       max-width: 350px;
       margin: 14px auto;
-      padding: 18px;
+      padding: 16px;
       border-radius: 12px;
       text-decoration: none;
       font-weight: bold;
       color: white;
       transition: transform 0.2s ease, background-color 0.3s ease;
     }
+
+    .menu a i {
+      font-size: 20px;
+    }
+
     .menu a:hover {
-      transform: scale(1.05);
+      transform: translateY(-3px) scale(1.03);
+      filter: brightness(1.15);
     }
 
     .login, .daftar {
-      background: #555;
-      font-size: 24px;
+      background: #ff4444;
+      font-size: 22px;
       animation: pulse 2s infinite;
     }
+
     .login:hover, .daftar:hover {
-      background: #777;
+      background: #ff6666;
     }
 
     @keyframes pulse {
-      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,0.5); }
-      70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(255,255,255,0); }
-      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,68,68,0.6); }
+      70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(255,68,68,0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,68,68,0); }
     }
 
     .default {
       background-color: #1d212b;
-      color: #ddd;
       font-size: 16px;
     }
+
+    .default:nth-child(4) { background: #0055ff; }   /* RTP */
+    .default:nth-child(5) { background: #28a745; }   /* Live chat */
+    .default:nth-child(6) { background: #25d366; }   /* WhatsApp */
   </style>
 </head>
 <body>
 
- 
+  <!-- Gambar lingkaran di atas -->
+  <div class="top-circle">
+    <img src="lucky-cat.png" alt="Lucky Cat">
+  </div>
+
   <h1>SEMOGA WD</h1>
 
   <div class="description">
@@ -82,12 +113,13 @@
   </div>
 
   <div class="menu">
-    <a class="login" href="https://puli32551.com/?referralid=joyful99" target="_blank">LOGIN</a>
-    <a class="daftar" href="https://puli81090.com/?referralid=joyful99" target="_blank">DAFTAR</a>
-    <a class="login alternatif" href="https://puli31935.com/?referralid=joyful99" target="_blank">LOGIN ALTERNATIF</a>
-    <a class="default" href="https://puli31935.com/rtp/" target="_blank">🎯 RTP SLOT GACOR</a>
-    <a class="default" href="https://direct.lc.chat/16829220?utm_medium=social&utm_source=heylink.me" target="_blank">💬 LIVECHAT</a>
-    <a class="default" href="https://wa.me/6282310203030" target="_blank">📱 0812-4444-4599</a>
+    <a class="login" href="https://puli32551.com/?referralid=joyful99" target="_blank"><i class="fas fa-sign-in-alt"></i> LOGIN</a>
+    <a class="daftar" href="https://puli81090.com/?referralid=joyful99" target="_blank"><i class="fas fa-user-plus"></i> DAFTAR</a>
+    <a class="login alternatif" href="https://puli31935.com/?referralid=joyful99" target="_blank"><i class="fas fa-key"></i> LOGIN ALTERNATIF</a>
+
+    <a class="default" href="https://puli31935.com/rtp/" target="_blank"><i class="fas fa-bullseye"></i> RTP SLOT GACOR</a>
+    <a class="default" href="https://direct.lc.chat/16829220?utm_medium=social&utm_source=heylink.me" target="_blank"><i class="fas fa-comments"></i> LIVECHAT</a>
+    <a class="default" href="https://wa.me/6281244444599" target="_blank"><i class="fab fa-whatsapp"></i> 0812-4444-4599</a>
   </div>
 
 </body>
