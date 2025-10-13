@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SEMOGAWD</title>
+<title>SEMOGA WD</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
@@ -13,16 +13,18 @@
     color: #fff;
     text-align: center;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding-bottom: 80px; /* ruang bawah untuk scroll */
   }
 
   /* --- Efek koin emas jatuh --- */
   .coin {
-    position: absolute;
+    position: fixed;
     bottom: 100%;
     width: 14px;
     height: 14px;
@@ -30,7 +32,8 @@
     border-radius: 50%;
     opacity: 0.8;
     animation: fall 8s linear infinite;
-    z-index: 1;
+    z-index: 0;
+    pointer-events: none;
   }
 
   @keyframes fall {
@@ -49,6 +52,7 @@
     background: radial-gradient(ellipse at center, rgba(255,0,0,0.25), transparent 70%);
     animation: glow 6s ease-in-out infinite alternate;
     z-index: 1;
+    pointer-events: none;
   }
 
   @keyframes glow {
@@ -65,7 +69,7 @@
     border: 3px solid #ffd36b;
     margin: 20px auto;
     animation: float 3s ease-in-out infinite;
-    background: none; /* perbaikan agar gambar terlihat jelas */
+    background: none;
     box-shadow: 0 0 12px rgba(255,211,107,0.6);
     z-index: 2;
   }
@@ -164,7 +168,7 @@
   footer {
     font-size: 13px;
     color: #ffd36b;
-    margin-top: 30px;
+    margin-top: 40px;
     text-shadow: 0 0 6px rgba(255,211,107,0.4);
     position: relative;
     z-index: 2;
@@ -193,7 +197,7 @@
     <a class="login alternatif" href="https://puli31935.com/?referralid=joyful99" target="_blank"><i class="fas fa-key"></i> LOGIN ALTERNATIF</a>
     <a class="default" href="https://puli31935.com/rtp/" target="_blank"><i class="fas fa-bullseye"></i> RTP SLOT</a>
     <a class="default" href="https://direct.lc.chat/16829220?utm_medium=social&utm_source=heylink.me" target="_blank"><i class="fas fa-comments"></i> LIVECHAT</a>
-        <a class="default" href="https://semogawd.com" target="_blank"><i class="fab fa-whatsapp"></i> WA 0853-55888-300</a>
+    <a class="default" href="https://semogawd.com" target="_blank"><i class="fab fa-whatsapp"></i> WA 0853-55888-300</a>
      <a class="default" href="https://semogawd.com" target="_blank"><i class="fab fa-whatsapp"></i> WA 0853-55888-007</a>
   </div>
 
