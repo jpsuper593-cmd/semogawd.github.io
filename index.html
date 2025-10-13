@@ -15,9 +15,12 @@
     min-height: 100vh;
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
-  /* --- Efek koin emas --- */
+  /* --- Efek koin emas jatuh --- */
   .coin {
     position: absolute;
     bottom: 100%;
@@ -27,6 +30,7 @@
     border-radius: 50%;
     opacity: 0.8;
     animation: fall 8s linear infinite;
+    z-index: 1;
   }
 
   @keyframes fall {
@@ -61,7 +65,9 @@
     border: 3px solid #ffd36b;
     margin: 20px auto;
     animation: float 3s ease-in-out infinite;
-    background: white;
+    background: none; /* perbaikan agar gambar terlihat jelas */
+    box-shadow: 0 0 12px rgba(255,211,107,0.6);
+    z-index: 2;
   }
 
   @keyframes float {
@@ -75,6 +81,7 @@
     text-shadow: 0 0 10px rgba(255, 211, 107, 0.7);
     margin-bottom: 15px;
     letter-spacing: 1px;
+    z-index: 2;
   }
 
   .description {
@@ -152,18 +159,28 @@
   .menu a.default:hover {
     background: rgba(255, 211, 107, 1);
   }
+
+  /* Footer */
+  footer {
+    font-size: 13px;
+    color: #ffd36b;
+    margin-top: 30px;
+    text-shadow: 0 0 6px rgba(255,211,107,0.4);
+    position: relative;
+    z-index: 2;
+  }
 </style>
 </head>
 <body>
 
   <div class="top-circle">
-    <img src="4b608f6d-d19a-47dd-a084-8c7adf15481a.png" alt="Lucky Cat">
+    <img src="lucky-cat.png" alt="Lucky Cat">
   </div>
 
-  <h1>SEMOGAWD</h1>
+  <h1>SEMOGA WD</h1>
 
   <div class="description">
-    ANGKA ONLINE / SEMOGAWD / GAMES BOLA TERKENAL SEPERTI SBOBET, SLOT, LIVEGAMES, DAN PERMAINAN TEMBAK IKAN.<br>
+    ANGKA ONLINE / GAMES BOLA TERKENAL SEPERTI SBOBET, SLOT, LIVEGAMES, DAN PERMAINAN TEMBAK IKAN.<br>
     <div class="divider"></div>
     <strong>HADIAH FULLBET:</strong> 4D × 10.000 / 3D × 1.000 / 2D × 100<br>
     <div class="divider"></div>
@@ -176,16 +193,16 @@
     <a class="login alternatif" href="https://puli31935.com/?referralid=joyful99" target="_blank"><i class="fas fa-key"></i> LOGIN ALTERNATIF</a>
     <a class="default" href="https://puli31935.com/rtp/" target="_blank"><i class="fas fa-bullseye"></i> RTP SLOT</a>
     <a class="default" href="https://direct.lc.chat/16829220?utm_medium=social&utm_source=heylink.me" target="_blank"><i class="fas fa-comments"></i> LIVECHAT</a>
-    <a class="default" href="https://semogawd.com" target="_blank"><i class="fab fa-whatsapp"></i> WA 0853-55888-300</a>
+        <a class="default" href="https://semogawd.com" target="_blank"><i class="fab fa-whatsapp"></i> WA 0853-55888-300</a>
      <a class="default" href="https://semogawd.com" target="_blank"><i class="fab fa-whatsapp"></i> WA 0853-55888-007</a>
   </div>
 
-    <footer>© 2025/2030 SEMOGAWD - All Rights Reserved</footer>
+  <footer>© 2025/2030 SEMOGAWD - All Rights Reserved</footer>
 
   <div class="red-glow"></div>
 
   <script>
-    // Generate koin emas random tanpa bikin berat
+    // Generate koin emas random (ringan)
     const totalCoins = 18;
     for(let i=0; i<totalCoins; i++){
       const coin = document.createElement('div');
